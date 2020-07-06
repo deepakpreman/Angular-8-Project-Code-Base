@@ -91,11 +91,12 @@ export class TableComponent implements OnInit {
     return this.data.displayName[this.data.labels.indexOf(title)];
   }
   selectCheckBox(element,checked){
-    element.checked = checked;  
+    element.checkbox = checked;  
     console.log(checked);  
     let val = {
       methodToCall: 'checked', 
-      value : element
+      value : element,
+      checked : checked
     }
     this.tableEvent.emit(val);
   }
